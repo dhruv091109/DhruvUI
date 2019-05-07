@@ -1,0 +1,212 @@
+<div class="d-flex flex-row">
+<div class="d-flex flex-row flex-wrap p-4">
+  <div class="card-deck">
+  <div class="card mb-3 d-inline-flex  ">
+
+    <div class="card-body">
+      <div class="p-3">
+        <div class="float-left mr-4">
+          <h3>STEPS</h3>
+        </div>
+        <div class="float-right">
+          <div class="steps">
+            <div class="step"><a class="active">1</a></div>
+            <div class="step"><a>2</a></div>
+            <div class="step"><a>3</a></div>
+            <div class="step"><a>4</a></div>
+
+          </div>
+        </div>
+      </div></div>
+  </div>
+  <div class="card mb-3 d-inline-flex ">
+    <div class="card-body">
+    <div class="p-3">
+    <div class="float-left">
+      <h3 class="mr-4">STEPS DARK</h3>
+    </div>
+    <div class="float-right">
+      <div class="steps steps-dark">
+        <div class="step"><a class="active">1</a></div>
+        <div class="step"><a>2</a></div>
+        <div class="step"><a>3</a></div>
+        <div class="step"><a>4</a></div>
+
+      </div></div>
+  </div>
+    </div>
+    </div>
+    <div class="card mb-3 ">
+      <div class="card-header">
+
+        <h3>Form Error States</h3>
+      </div>
+      <div class="card-body">
+
+        <p class="color-purple">Danger</p>
+        <kendo-textbox-container floatingLabel="First name">
+          <input kendoTextBox class="danger" />
+        </kendo-textbox-container>
+        <p class="color-purple">Danger</p>
+        <kendo-combobox [data]="dropDown_listItems" class="danger mt-4 mb-4" [value]="'Basketball'">
+        </kendo-combobox>
+        <p class="color-purple">Info</p>
+        <kendo-textbox-container floatingLabel="First name">
+          <input kendoTextBox class="info" />
+        </kendo-textbox-container>
+        <p class="color-purple">Info</p>
+        <kendo-combobox [data]="dropDown_listItems" class="info mt-4 mb-4" [value]="'Basketball'">
+        </kendo-combobox>
+
+        <p class="color-purple">Warning</p>
+        <kendo-textbox-container floatingLabel="First name">
+          <input kendoTextBox class="warning" />
+        </kendo-textbox-container>
+        <p class="color-purple">Warning</p>
+        <kendo-combobox [data]="dropDown_listItems" class="warning mt-4 mb-4" [value]="'Basketball'">
+        </kendo-combobox>
+
+        <p class="color-purple">Success</p>
+        <kendo-textbox-container floatingLabel="First name">
+          <input kendoTextBox class="success" />
+        </kendo-textbox-container>
+        <p class="color-purple">Success</p>
+        <kendo-combobox [data]="dropDown_listItems" class="success mt-4 mb-4" [value]="'Basketball'">
+        </kendo-combobox>
+      </div>
+
+    </div>
+  <div class="card mb-3 ">
+    <div class="card-body ">
+    <h3 class="text-center mt-3">STEPS</h3>
+    <div class="steps vertical">
+      <div class="step"><a class="active">1</a></div>
+      <hr>
+      <div class="step"><a>2</a></div>
+      <hr>
+      <div class="step"><a>3</a></div>
+      <hr>
+      <div class="step"><a>4</a></div>
+
+    </div>
+
+    </div>
+  </div>
+
+  <div class="card mb-3 ">
+    <div class="card-body d-flex flex-row ">
+    <div class="calendar-icon m-1">
+      <span class="oi oi-calendar"></span>
+    </div>
+    <div class="calendar-icon active m-1">
+      <span class="oi oi-calendar"></span>
+    </div>
+    <div class="view-icon m-1">
+      <span class="oi oi-menu"></span>
+    </div>
+    <div class="view-icon active m-1">
+      <span class="oi oi-grid-two-up"></span>
+    </div>
+
+      <div class="m-1">
+        <p>Sortable icon</p>
+        <span class="oi oi-chevron-bottom grid-arrow-icon"></span>
+
+      </div>
+    </div>
+  </div>
+  <div class="card mb-3 ">
+    <div class="card-body d-flex flex-row flex-wrap">
+
+      <div class="col-1">
+        <span class="oi oi-person"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-calendar"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-bell"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-cog"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-plus"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-rss"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-clock"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-magnifying-glass"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-pencil"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-paperclip"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-link-intact"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-trash"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-home"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-star"></span>
+      </div>
+    </div>
+    <div class="card-body d-flex flex-row flex-wrap">
+      <div class="col-1">
+        <span class="oi oi-person active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-calendar active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-bell active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-cog active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-plus active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-rss active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-clock active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-magnifying-glass active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-pencil active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-paperclip active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-link-intact active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-trash active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-home active"></span>
+      </div>
+      <div class="col-1">
+        <span class="oi oi-star active"></span>
+      </div>
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>

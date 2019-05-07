@@ -1,0 +1,30 @@
+<div class="row widget-wrapper">
+   <div class="col-xs-12 col-sm-6 offset-sm-3 widget-col">
+        <div class="card">
+            <div class="card-block">
+                    <form name="form" class="k-form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+                        <fieldset>
+                            <legend>Login</legend>
+                            <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                                <label>User Name</label> 
+                                <input class="k-textbox" placeholder="User name" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+                                 <span *ngIf="f.submitted && !username.valid" class="help-block validation">Username is required</span>
+                                 <span *ngIf="f.submitted && !username.valid" class="help-block validation" [innerHTML]="username.errors.message"></span>
+                                 
+                            </div>
+                            <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                                <label>Password</label>
+                                <input class="k-textbox" placeholder="Password" type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                                <span *ngIf="f.submitted && !password.valid" class="help-block validation">Password is required</span>
+                                <span *ngIf="f.submitted && !password.valid" class="help-block validation" [innerHTML]="password.errors.message"></span>
+                            </div>
+                          </fieldset>
+                          <div class="text-right">
+                                <button kendoButton  [disabled]="loading" [primary]='true'>Login</button>
+                                <button kendoButton [disabled]="loading" (click)='onRegisterClick($event)'>Register</button>
+                          </div>                       
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>

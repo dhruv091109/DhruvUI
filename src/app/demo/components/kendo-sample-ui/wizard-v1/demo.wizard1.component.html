@@ -1,0 +1,170 @@
+<div class="d-flex">
+  <div class="d-flex flex-sidebar flex-shrink-0 border-right">
+    <div class="d-flex flex-column flex-grow-1">
+      <kendo-panelbar>
+        <kendo-panelbar-item title="Invasion Games">
+          <kendo-panelbar-item title="Hockey" class="k-state-active"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Soccer" class="has-child">
+            <kendo-panelbar-item title="WorldCup" class="has-child">
+
+              <kendo-panelbar-item title="2009" class="k-state-active">
+
+              </kendo-panelbar-item>
+              <kendo-panelbar-item title="2010" >
+
+              </kendo-panelbar-item>
+
+            </kendo-panelbar-item>
+          </kendo-panelbar-item>
+          <kendo-panelbar-item title="Rugby"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Basketball"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Water polo"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Netball"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Striking & Fielding Games" class="bullet-point">
+          <kendo-panelbar-item title="Cricket"  >
+
+          </kendo-panelbar-item>
+          <kendo-panelbar-item title="Softball" ></kendo-panelbar-item>
+          <kendo-panelbar-item title="Baseball" ></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Net & Court Games" [expanded]="true">
+          <kendo-panelbar-item title="Badminton"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Squash"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Tennis" [selected]="true"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Table Tennis"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Volleyball"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Target Games">
+          <kendo-panelbar-item title="Golf"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Lawn bowls"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Tenpin bowling"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+      </kendo-panelbar>
+
+    </div>
+  </div>
+
+  <div class="d-flex flex-grow-1 flex-column">
+    <div class="content-header d-flex border-bottom border-gray">
+      <button kendoButton class="btn-white" (click)="onButtonClick()">Lorem Ipsum</button>
+      <button kendoButton class="btn-white" (click)="onButtonClick()">Lorem Ipsum dolor sit amet</button>
+    </div>
+    <div class="p-4">
+      <div class=" d-flex flex-row">
+
+
+        <div class="flex-grow-1">
+
+          <h1>New Securable</h1></div>
+        <div class="">
+          <kendo-buttongroup>
+            <button kendoButton [togglable]="true">
+              Securable
+            </button>
+            <button kendoButton [togglable]="true">
+              Access Rights
+            </button>
+            <button kendoButton [togglable]="true">
+              Roles
+            </button>
+          </kendo-buttongroup>
+        </div>
+      </div>
+      <div class="card ">
+        <div class="d-flex card-header pt-3">
+
+          <div class="app-icon bg-pink "><span class="oi oi-timer"></span></div>
+          <div class="flex-grow-1 pl-3">
+            <h3 class="p-0">Lorem Ipsum</h3>
+            <h2 class="color-purple">Lorem ipsum dolor sit amet</h2></div>
+          <div class="p-3">
+            <div class="float-left mr-4">
+              <h3>STEPS</h3>
+            </div>
+            <div class="float-right">
+              <div class="steps">
+                <div class="step"><a class="active">1</a></div>
+                <div class="step"><a>2</a></div>
+                <div class="step"><a>3</a></div>
+                <div class="step"><a>4</a></div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-4">
+              <p class="color-purple">Lorem ipsum dolor sit amet</p>
+              <kendo-textbox-container floatingLabel="Lorem ipsum">
+                <input kendoTextBox/>
+              </kendo-textbox-container>
+            </div>
+            <div class="form-group col-4 pl-2">
+              <p class="color-purple">Lorem ipsum dolor sit amet</p>
+              <kendo-textbox-container floatingLabel="Lorem ipsum">
+                <input kendoTextBox/>
+              </kendo-textbox-container>
+            </div>
+            <div class="form-group col-4 pl-2">
+              <p class="color-purple">Lorem ipsum dolor sit amet</p>
+              <kendo-textbox-container floatingLabel="Lorem ipsum">
+                <input kendoTextBox/>
+              </kendo-textbox-container>
+            </div>
+
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <p class="color-purple">Lorem ipsum dolor sit amet</p>
+              <kendo-textbox-container floatingLabel="Lorem ipsum">
+                <input kendoTextBox/>
+              </kendo-textbox-container>
+
+            </div>
+            <div class="form-group col-6  pl-2">
+              <p class="color-purple">Lorem ipsum dolor sit amet</p>
+
+                  <kendo-upload class="mt-4" >
+
+                  </kendo-upload>
+
+            </div>
+
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-2">
+              <p class="color-purple">Lorem ipsum</p>
+              <div class="image-upload d-flex h-100">
+                <div class="col-12 text-center k-justify-content-center align-self-center">
+                <span class="k-icon k-i-photo-camera text-primary"></span>
+                <p class="color-purple">Upload Image</p></div>
+              </div>
+
+            </div>
+            <div class="form-group col-10">
+              <p class="color-purple">TextArea</p>
+              <kendo-textbox-container class="mt-0">
+                <textarea kendoTextArea></textarea>
+              </kendo-textbox-container>
+
+            </div>
+          </div>
+        </div>
+<div class="card-footer mb-2">
+
+  <div class="form-row float-right">
+    <button kendoButton  (click)="onButtonClick()">Cancel</button>
+    <button kendoButton class="btn-primary" (click)="onButtonClick()" [primary]="true">Next</button>
+
+  </div>
+
+</div>
+      </div>
+    </div>
+  </div>
+</div>

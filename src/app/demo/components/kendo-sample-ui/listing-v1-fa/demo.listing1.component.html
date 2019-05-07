@@ -1,0 +1,114 @@
+<div class="d-flex">
+  <div class="d-flex flex-sidebar flex-shrink-0 border-right">
+    <div class="d-flex flex-column flex-grow-1">
+
+      <kendo-panelbar>
+        <kendo-panelbar-item title="Invasion Games">
+          <kendo-panelbar-item title="Hockey" class="k-state-active"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Soccer" class="has-child">
+            <kendo-panelbar-item title="WorldCup"></kendo-panelbar-item>
+          </kendo-panelbar-item>
+          <kendo-panelbar-item title="Rugby"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Basketball"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Water polo"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Netball"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Striking & Fielding Games">
+          <kendo-panelbar-item title="Cricket" class="bullet-point" >
+
+          </kendo-panelbar-item>
+          <kendo-panelbar-item title="Softball" class="bullet-point"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Baseball" class="bullet-point"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Net & Court Games" [expanded]="true">
+          <kendo-panelbar-item title="Badminton"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Squash"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Tennis" [selected]="true"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Table Tennis"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Volleyball"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Target Games">
+          <kendo-panelbar-item title="Golf"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Lawn bowls"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Tenpin bowling"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+      </kendo-panelbar>
+    </div>
+  </div>
+
+  <div class="d-flex flex-grow-1 flex-column">
+    <div class="content-header d-flex border-bottom border-gray">
+      <button kendoButton class="btn-white" (click)="onButtonClick()">Lorem Ipsum</button>
+      <button kendoButton class="btn-white" (click)="onButtonClick()">Lorem Ipsum dolor sit amet</button>
+    </div>
+    <div class="pt-3 pb-3">
+      <div class=" d-flex flex-row border-bottom border-gray">
+
+
+        <div class="flex-grow-1 pl-4 pr-4">
+          <p>Showing results for</p>
+          <h1 class="color-purple">Lorem Ipsum Dolor Sit - List View</h1></div>
+        <div class="d-flex flex-row flex-wrap pr-4">
+          <div class="ml-2 mr-2"><p>Sort</p>
+            <kendo-combobox [data]="dropDown_listItems" [value]="'Basketball'" class="input-filter">
+            </kendo-combobox>
+          </div>
+          <div class="ml-2 mr-2"><p>Items per page</p>
+            <kendo-combobox [data]="dropDown_listItems" [value]="'Basketball'" class="input-filter">
+            </kendo-combobox>
+          </div>
+          <div class="d-flex flex-column  ml-2">
+            <p class="">View</p>
+            <div class="flex-grow-1">
+              <div class="view-icon  float-left mr-1">
+                <span class="oi oi-menu"></span>
+              </div>
+              <div class="view-icon float-left active ml-1">
+                <span class="oi oi-grid-two-up"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end p-4">
+        <div class="flex-grow-1 align-self-center">
+          <input type="checkbox" id="c1" class="k-checkbox"/>
+          <label class="k-checkbox-label" for="c1">Order Items from Warehouse</label><br/>
+        </div>
+        <div>
+          <button class="k-button ">Download Order Sheet</button>
+          <button class="k-button ">Upload Order Sheet</button>
+        </div>
+      </div>
+      <div id="KendoGrid" class="card ml-4 mr-4"  style="display:block;">
+        <div class="card-body p-0">
+          <kendo-grid [data]="gridData" [height]="800"  class="pb-2">
+            <kendo-grid-column field="ProductID" title="ID"  [width]="45" >
+            </kendo-grid-column>
+            <kendo-grid-column field="ProductName" title="Name"  >
+            </kendo-grid-column>
+            <kendo-grid-column field="Category.CategoryName" title="Category">
+            </kendo-grid-column>
+            <kendo-grid-column field="UnitPrice" title="Price" [width]="80" >
+            </kendo-grid-column>
+            <kendo-grid-column field="UnitsInStock" title="In stock" [width]="80">
+            </kendo-grid-column>
+            <kendo-grid-column field="Discontinued" title="Discontinued" [width]="100">
+              <ng-template kendoGridCellTemplate let-dataItem>
+
+                <input type="checkbox" class="k-checkbox" [checked]="dataItem.Discontinued">
+                <label class="k-checkbox-label k-checkbox-gridlabel" ></label>
+
+              </ng-template>
+            </kendo-grid-column>
+            <kendo-grid-column width="190">
+              <ng-template kendoGridCellTemplate>
+                <button class="k-button k-primary-alt">Primary Button</button>
+              </ng-template>
+            </kendo-grid-column>
+          </kendo-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,411 @@
+<div class="d-flex">
+  <div class="d-flex flex-sidebar flex-shrink-0 border-right">
+    <div class="d-flex flex-column flex-grow-1">
+      <kendo-panelbar>
+        <kendo-panelbar-item title="Invasion Games">
+          <kendo-panelbar-item title="Hockey" class="k-state-active"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Soccer" class="has-child">
+            <kendo-panelbar-item title="WorldCup"></kendo-panelbar-item>
+          </kendo-panelbar-item>
+          <kendo-panelbar-item title="Rugby"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Basketball"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Water polo"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Netball"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Striking & Fielding Games">
+          <kendo-panelbar-item title="Cricket" class="bullet-point" >
+
+          </kendo-panelbar-item>
+          <kendo-panelbar-item title="Softball" class="bullet-point"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Baseball" class="bullet-point"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Net & Court Games" [expanded]="true">
+          <kendo-panelbar-item title="Badminton"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Squash"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Tennis" [selected]="true"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Table Tennis"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Volleyball"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item title="Target Games">
+          <kendo-panelbar-item title="Golf"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Lawn bowls"></kendo-panelbar-item>
+          <kendo-panelbar-item title="Tenpin bowling"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+      </kendo-panelbar>
+    </div>
+  </div>
+
+  <div class="d-flex flex-grow-1 flex-column">
+    <div class="content-header d-flex border-bottom border-gray">
+      <button kendoButton class="btn-white" (click)="onButtonClick()">Lorem Ipsum</button>
+      <button kendoButton class="btn-white" (click)="onButtonClick()">Lorem Ipsum dolor sit amet</button>
+    </div>
+    <div class="pt-3 pb-3">
+      <div class=" d-flex flex-row border-bottom border-gray">
+
+
+        <div class="flex-grow-1 pl-4 pr-4">
+          <p>Showing results for</p>
+          <h1 class="color-purple">Lorem Ipsum Dolor Sit - Grid V1</h1></div>
+        <div class="d-flex flex-row flex-wrap pr-4">
+          <div class="ml-2 mr-2"><p>Sort</p>
+            <kendo-combobox [data]="dropDown_listItems" [value]="'Basketball'" class="input-filter">
+            </kendo-combobox>
+          </div>
+          <div class="ml-2 mr-2"><p>Items per page</p>
+            <kendo-combobox [data]="dropDown_listItems" [value]="'Basketball'" class="input-filter">
+            </kendo-combobox>
+          </div>
+          <div class="d-flex flex-column  ml-2">
+            <p class="">View</p>
+            <div class="flex-grow-1">
+              <div class="view-icon  float-left mr-1">
+                <span class="oi oi-menu"></span>
+              </div>
+              <div class="view-icon float-left active ml-1">
+                <span class="oi oi-grid-two-up"></span>
+              </div></div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex p-4">
+        <div class="ml-3 mr-3 align-self-center">
+          <input type="checkbox" id="c1" class="k-checkbox" />
+          <label class="k-checkbox-label" for="c1">View Detailed Results</label><br/>
+        </div>
+        <div class="ml-4 mr-4 align-self-center">
+          <input type="checkbox" id="c2" class="k-checkbox" />
+          <label class="k-checkbox-label" for="c2">Order direct containers to receive bulk discount</label><br/>
+        </div>
+      </div>
+
+    </div>
+    <div class="d-flex flex-column ml-4 mr-4">
+      <div class="d-flex flex-row flex-wrap mt-3 mb-3 ">
+<div class="col-2"><div class="card h-100">
+  <div class="card-body d-flex align-items-center justify-content-center">
+    <span class="k-icon k-i-photo-camera text-primary grid-photo"></span>
+
+  </div>
+
+</div> </div>
+      <div class="col-8"><div class="card">
+        <div class="card-body">
+          <h4 class="font-weight-bold">Lorem ipsum dolor sit amet</h4>
+<p class="color-purple">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sit amet magna ac pulvinar. Vivamus malesuada et nisi vitae interdum. Etiam nisi diam, varius vitae vehicula nec, aliquam eu ligula. Morbi pharetra nunc nec odio rutrum fermentum. Nullam orci arcu, elementum quis tristique a, gravida eget ligula.
+</p>
+        </div>
+        <div class="card-footer p-1 pl-3 pr-3 d-flex justify-content-between flex-row">
+<div class="d-flex flex-row justify-content-center">
+  <p class="align-self-center">Code</p>
+  <span class="align-self-center ml-2">123123132</span>
+</div>
+          <div class="d-flex flex-row justify-content-center">
+            <p class="align-self-center">Size</p>
+            <span class="align-self-center ml-2">215/55R16</span>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <p class="align-self-center">Min</p>
+            <span class="align-self-center ml-2">25</span>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <p class="align-self-center">Direct Unit</p>
+            <span class="align-self-center ml-2">$0.00</span>
+          </div>
+          <div class="d-flex flex-row justify-content-center">
+            <p class="align-self-center">TS Amount</p>
+            <span class="align-self-center ml-2">$3.00</span>
+          </div>
+
+        </div>
+
+      </div></div>
+      <div class="col-2"><div class="d-flex flex-column">
+        <p>Price</p>
+        <div class="price">
+        <p>$24,725</p><span class="currency pl-1">CAD</span>
+        </div>
+        <div class="price price-small color-green">
+          <p class="color-green">$24,725</p><span class="currency ml-1">CAD</span><span class="oi oi-lock-locked ml-1 align-self-center"></span>
+        </div>
+        <button kendoButton class="btn-primary mt-3" (click)="onButtonClick()" [primary]="true">Add to Cart</button>
+      </div></div>
+      </div>
+      <div class="d-flex flex-row flex-wrap mt-3 mb-3 ">
+        <div class="col-2"><div class="card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <span class="k-icon k-i-photo-camera text-primary grid-photo"></span>
+
+          </div>
+
+        </div> </div>
+        <div class="col-8"><div class="card">
+          <div class="card-body">
+            <h4 class="font-weight-bold">Lorem ipsum dolor sit amet</h4>
+            <p class="color-purple">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sit amet magna ac pulvinar. Vivamus malesuada et nisi vitae interdum. Etiam nisi diam, varius vitae vehicula nec, aliquam eu ligula. Morbi pharetra nunc nec odio rutrum fermentum. Nullam orci arcu, elementum quis tristique a, gravida eget ligula.
+            </p>
+          </div>
+          <div class="card-footer p-1 pl-3 pr-3 d-flex justify-content-between flex-row">
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Code</p>
+              <span class="align-self-center ml-2">123123132</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Size</p>
+              <span class="align-self-center ml-2">215/55R16</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Min</p>
+              <span class="align-self-center ml-2">25</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Direct Unit</p>
+              <span class="align-self-center ml-2">$0.00</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">TS Amount</p>
+              <span class="align-self-center ml-2">$3.00</span>
+            </div>
+
+          </div>
+
+        </div></div>
+        <div class="col-2"><div class="d-flex flex-column">
+          <p>Price</p>
+          <div class="price">
+            <p>$24,725</p><span class="currency pl-1">CAD</span>
+          </div>
+          <div class="price price-small color-green">
+            <p class="color-green">$24,725</p><span class="currency ml-1">CAD</span><span class="oi oi-lock-locked ml-1 align-self-center"></span>
+          </div>
+          <button kendoButton class="btn-primary mt-3" (click)="onButtonClick()" [primary]="true">Add to Cart</button>
+        </div></div>
+      </div>
+      <div class="d-flex flex-row flex-wrap mt-3 mb-3 ">
+        <div class="col-2"><div class="card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <span class="k-icon k-i-photo-camera text-primary grid-photo"></span>
+
+          </div>
+
+        </div> </div>
+        <div class="col-8"><div class="card">
+          <div class="card-body">
+            <h4 class="font-weight-bold">Lorem ipsum dolor sit amet</h4>
+            <p class="color-purple">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sit amet magna ac pulvinar. Vivamus malesuada et nisi vitae interdum. Etiam nisi diam, varius vitae vehicula nec, aliquam eu ligula. Morbi pharetra nunc nec odio rutrum fermentum. Nullam orci arcu, elementum quis tristique a, gravida eget ligula.
+            </p>
+          </div>
+          <div class="card-footer p-1 pl-3 pr-3 d-flex justify-content-between flex-row">
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Code</p>
+              <span class="align-self-center ml-2">123123132</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Size</p>
+              <span class="align-self-center ml-2">215/55R16</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Min</p>
+              <span class="align-self-center ml-2">25</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Direct Unit</p>
+              <span class="align-self-center ml-2">$0.00</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">TS Amount</p>
+              <span class="align-self-center ml-2">$3.00</span>
+            </div>
+
+          </div>
+
+        </div></div>
+        <div class="col-2"><div class="d-flex flex-column">
+          <p>Price</p>
+          <div class="price">
+            <p>$24,725</p><span class="currency pl-1">CAD</span>
+          </div>
+          <div class="price price-small color-green">
+            <p class="color-green">$24,725</p><span class="currency ml-1">CAD</span><span class="oi oi-lock-locked ml-1 align-self-center"></span>
+          </div>
+          <button kendoButton class="btn-primary mt-3" (click)="onButtonClick()" [primary]="true">Add to Cart</button>
+        </div></div>
+      </div>
+      <div class="d-flex flex-row flex-wrap mt-3 mb-3 ">
+        <div class="col-2"><div class="card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <span class="k-icon k-i-photo-camera text-primary grid-photo"></span>
+
+          </div>
+
+        </div> </div>
+        <div class="col-8"><div class="card">
+          <div class="card-body">
+            <h4 class="font-weight-bold">Lorem ipsum dolor sit amet</h4>
+            <p class="color-purple">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sit amet magna ac pulvinar. Vivamus malesuada et nisi vitae interdum. Etiam nisi diam, varius vitae vehicula nec, aliquam eu ligula. Morbi pharetra nunc nec odio rutrum fermentum. Nullam orci arcu, elementum quis tristique a, gravida eget ligula.
+            </p>
+          </div>
+          <div class="card-footer p-1 pl-3 pr-3 d-flex justify-content-between flex-row">
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Code</p>
+              <span class="align-self-center ml-2">123123132</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Size</p>
+              <span class="align-self-center ml-2">215/55R16</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Min</p>
+              <span class="align-self-center ml-2">25</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Direct Unit</p>
+              <span class="align-self-center ml-2">$0.00</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">TS Amount</p>
+              <span class="align-self-center ml-2">$3.00</span>
+            </div>
+
+          </div>
+
+        </div></div>
+        <div class="col-2"><div class="d-flex flex-column">
+          <p>Price</p>
+          <div class="price">
+            <p>$24,725</p><span class="currency pl-1">CAD</span>
+          </div>
+          <div class="price price-small color-green">
+            <p class="color-green">$24,725</p><span class="currency ml-1">CAD</span><span class="oi oi-lock-locked ml-1 align-self-center"></span>
+          </div>
+          <button kendoButton class="btn-primary mt-3" (click)="onButtonClick()" [primary]="true">Add to Cart</button>
+        </div></div>
+      </div>
+      <div class="d-flex flex-row flex-wrap mt-3 mb-3 ">
+        <div class="col-2"><div class="card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <span class="k-icon k-i-photo-camera text-primary grid-photo"></span>
+
+          </div>
+
+        </div> </div>
+        <div class="col-8"><div class="card">
+          <div class="card-body">
+            <h4>Lorem ipsum dolor sit amet</h4>
+            <p class="color-purple">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sit amet magna ac pulvinar. Vivamus malesuada et nisi vitae interdum. Etiam nisi diam, varius vitae vehicula nec, aliquam eu ligula. Morbi pharetra nunc nec odio rutrum fermentum. Nullam orci arcu, elementum quis tristique a, gravida eget ligula.
+            </p>
+          </div>
+          <div class="card-footer p-1 pl-3 pr-3 d-flex justify-content-between flex-row">
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Code</p>
+              <span class="align-self-center ml-2">123123132</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Size</p>
+              <span class="align-self-center ml-2">215/55R16</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Min</p>
+              <span class="align-self-center ml-2">25</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Direct Unit</p>
+              <span class="align-self-center ml-2">$0.00</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">TS Amount</p>
+              <span class="align-self-center ml-2">$3.00</span>
+            </div>
+
+          </div>
+
+        </div></div>
+        <div class="col-2"><div class="d-flex flex-column">
+          <p>Price</p>
+          <div class="price">
+            <p>$24,725</p><span class="currency pl-1">CAD</span>
+          </div>
+          <div class="price price-small color-green">
+            <p class="color-green">$24,725</p><span class="currency ml-1">CAD</span><span class="oi oi-lock-locked ml-1 align-self-center"></span>
+          </div>
+          <button kendoButton class="btn-primary mt-3" (click)="onButtonClick()" [primary]="true">Add to Cart</button>
+        </div></div>
+      </div>
+      <div class="d-flex flex-row flex-wrap mt-3 mb-3 ">
+        <div class="col-2"><div class="card h-100">
+          <div class="card-body d-flex align-items-center justify-content-center">
+            <span class="k-icon k-i-photo-camera text-primary grid-photo"></span>
+
+          </div>
+
+        </div> </div>
+        <div class="col-8"><div class="card">
+          <div class="card-body">
+            <h4 class="font-weight-bold">Lorem ipsum dolor sit amet</h4>
+            <p class="color-purple">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum iaculis sit amet magna ac pulvinar. Vivamus malesuada et nisi vitae interdum. Etiam nisi diam, varius vitae vehicula nec, aliquam eu ligula. Morbi pharetra nunc nec odio rutrum fermentum. Nullam orci arcu, elementum quis tristique a, gravida eget ligula.
+            </p>
+          </div>
+          <div class="card-footer p-1 pl-3 pr-3 d-flex justify-content-between flex-row">
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Code</p>
+              <span class="align-self-center ml-2">123123132</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Size</p>
+              <span class="align-self-center ml-2">215/55R16</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Min</p>
+              <span class="align-self-center ml-2">25</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">Direct Unit</p>
+              <span class="align-self-center ml-2">$0.00</span>
+            </div>
+            <div class="d-flex flex-row justify-content-center">
+              <p class="align-self-center">TS Amount</p>
+              <span class="align-self-center ml-2">$3.00</span>
+            </div>
+
+          </div>
+
+        </div></div>
+        <div class="col-2"><div class="d-flex flex-column">
+          <p>Price</p>
+          <div class="price">
+            <p>$24,725</p><span class="currency pl-1">CAD</span>
+          </div>
+          <div class="price price-small color-green">
+            <p class="color-green">$24,725</p><span class="currency ml-1">CAD</span><span class="oi oi-lock-locked ml-1 align-self-center"></span>
+          </div>
+          <button kendoButton class="btn-primary mt-3" (click)="onButtonClick()" [primary]="true">Add to Cart</button>
+        </div></div>
+      </div>
+
+
+    </div>
+    <div class="d-flex flex-row justify-content-center pt-5 pb-5">
+      <div class="align-self-center"><h3>PAGE</h3></div>
+    <div class="align-self-center">
+      <nav>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item page-prev"> <a class="page-link" href="#"><span class="oi oi-chevron-left text-primary small"></span> </a> </li>
+          <li class="page-item page-next"> <a class="page-link" href="#"><span class="oi oi-chevron-right text-primary small"></span> </a> </li>
+        </ul>
+      </nav>
+
+</div>
+
+    </div>
+  </div>
+</div>

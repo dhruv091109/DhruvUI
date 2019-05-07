@@ -1,0 +1,16 @@
+{
+    "Demo": {
+      "Title": "Dhruv One UI Demo",
+      "SetLanguage": "Select your language",
+      "English": "English",
+      "French": "French",
+      "Chinese": "Chinese",
+      "TestMessageBox": "Test Message Box",
+      "TestMessageBoxAfterRedirect": "Test Message Box After Page Changed",
+      "TestLogout": "Test Logout",
+      "TestErrorLog": "Test Error Log",
+      "Message1": "Hi. I am showing message in popup dialog.",
+      "VldRangeLength": "Input characters length must be between 5 to 10"
+      
+    }
+  }

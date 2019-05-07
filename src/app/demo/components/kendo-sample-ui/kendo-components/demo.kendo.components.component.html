@@ -1,0 +1,592 @@
+
+<div class="container pt-5">
+  <h1>Kendo Components Overview</h1>
+<div id="KendoGrid" class="card" style="display:block;">
+  <div class="card-header">
+  <h3>Grid test</h3>
+  <p class="color-purple">Lorem ipsum dolor sit amet.</p></div>
+  <div class="card-body p-0">
+  <kendo-grid [data]="gridData" [height]="410"  class="pb-2">
+    <kendo-grid-column field="ProductID" title="ID"  [width]="45" >
+    </kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Name"  >
+    </kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category">
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Price" [width]="80" >
+    </kendo-grid-column>
+    <kendo-grid-column field="UnitsInStock" title="In stock" [width]="80">
+    </kendo-grid-column>
+    <kendo-grid-column field="Discontinued" title="Discontinued" [width]="100">
+      <ng-template kendoGridCellTemplate let-dataItem>
+
+        <input type="checkbox" class="k-checkbox" [checked]="dataItem.Discontinued">
+        <label class="k-checkbox-label k-checkbox-gridlabel" ></label>
+
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column [width]="120" >
+      <ng-template kendoGridCellTemplate >
+
+        <a class="pl-1 pr-1" href="#"><span class="oi oi-pencil text-primary"></span></a>
+        <a  class="pl-1 pr-1" href="#"><span class="oi oi-paperclip text-primary"></span></a>
+        <a  class="pl-1 pr-1" href="#"><span class="oi oi-link-intact text-primary"></span></a>
+        <a  class="pl-1 pr-1" href="#"><span class="oi oi-trash text-primary"></span></a>
+
+      </ng-template>
+    </kendo-grid-column>
+  </kendo-grid>
+  </div>
+</div>
+<div id="DropDowns">
+
+  <h2>DropDowns</h2>
+  <div class="example-wrapper" style="min-height: 400px;">
+    <div class="card pt-4  pb-4">
+    <div class="col-xs-12 col-sm-6 example-col">
+
+      <p class="color-purple">AutoComplete</p>
+      <kendo-autocomplete [data]="dropDown_listItems" [placeholder]="'Your favorite sport'">
+      </kendo-autocomplete>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">ComboBox</p>
+      <kendo-combobox [data]="dropDown_listItems" [value]="'Basketball'">
+      </kendo-combobox>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">DropDownList</p>
+      <kendo-dropdownlist [data]="dropDown_listItems" [value]="'Basketball'">
+      </kendo-dropdownlist>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">MultiSelect</p>
+      <kendo-multiselect [data]="dropDown_listItems" [value]="dropDown_value" [placeholder]="'Your favorite sports'"></kendo-multiselect>
+    </div>
+    </div>
+  </div>
+  <div class="example-wrapper" style="min-height: 400px;">
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">AutoComplete</p>
+      <kendo-autocomplete [data]="dropDown_listItems" [placeholder]="'Your favorite sport'" class="white">
+      </kendo-autocomplete>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">ComboBox</p>
+      <kendo-combobox [data]="dropDown_listItems" [value]="'Basketball'" class="white">
+      </kendo-combobox>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">DropDownList</p>
+      <kendo-dropdownlist [data]="dropDown_listItems" [value]="'Basketball'" class="white">
+      </kendo-dropdownlist>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">MultiSelect</p>
+      <kendo-multiselect [data]="dropDown_listItems" [value]="dropDown_value" [placeholder]="'Your favorite sports'" class="white"></kendo-multiselect>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">TextBox</p>
+      <kendo-textbox-container floatingLabel="First name" class="white">
+        <input kendoTextBox />
+      </kendo-textbox-container>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">TextArea</p>
+      <kendo-textbox-container floatingLabel="First name"  class="white">
+        <textarea kendoTextArea></textarea>
+      </kendo-textbox-container>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p >DatePicker</p>
+      <kendo-datepicker class="white" [value]="Date_Value"></kendo-datepicker>
+      <p >TimePicker</p>
+      <kendo-timepicker
+        [value]="Date_Value" class="white"
+      ></kendo-timepicker>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">MaskedTextBox</p>
+      <kendo-maskedtextbox
+        [(ngModel)]="maskedValue"
+        [mask]="'9-000'" class="white"
+      ></kendo-maskedtextbox>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col">
+      <p class="color-purple">NumericTextBox</p>
+      <kendo-numerictextbox
+        [(ngModel)] = "numericValue" class="white"
+      ></kendo-numerictextbox>
+    </div>
+    <div class="col-xs-12 col-sm-6 example-col white" >
+      <p class="color-purple">File Upload</p>
+      <kendo-upload  >
+
+      </kendo-upload>
+
+    </div>
+  </div>
+
+</div>
+<div id="Inputs">
+  <h2>Inputs</h2>
+  <div class='example-wrapper'>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p class="color-purple">MaskedTextBox</p>
+        <kendo-maskedtextbox
+          [(ngModel)]="maskedValue"
+          [mask]="'9-000'"
+        ></kendo-maskedtextbox>
+      </div>
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p class="color-purple">NumericTextBox</p>
+        <kendo-numerictextbox
+          [(ngModel)] = "numericValue"
+        ></kendo-numerictextbox>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p class="color-purple">Slider (value = {{sliderValue}})</p>
+        <kendo-slider
+          [min]="min"
+          [max]="max"
+          [smallStep]="smallStep"
+          [(ngModel)] = "sliderValue"
+        ></kendo-slider>
+      </div>
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p class="sub-text">Switch</p>
+        <kendo-switch [(ngModel)]="switchValue" ></kendo-switch>
+      </div>
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p class="color-purple">TextBox</p>
+        <kendo-textbox-container floatingLabel="First name" >
+          <input kendoTextBox />
+        </kendo-textbox-container>
+      </div>
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p class="color-purple">TextArea</p>
+        <kendo-textbox-container floatingLabel="First name" >
+          <textarea kendoTextArea></textarea>
+        </kendo-textbox-container>
+      </div>
+      <div class="col-xs-12 col-sm-6 example-col">
+        <p class="color-purple">File Upload</p>
+        <kendo-upload  >
+
+        </kendo-upload>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div id="Buttons">
+  <h2>Buttons</h2>
+  <div class="example-wrapper">
+    <div class="example-col">
+      <p class="sub-text">Button</p>
+      <button kendoButton  (click)="onButtonClick()">Default</button>
+      <button kendoButton class="btn-primary k-primary" (click)="onButtonClick()" [primary]="true">Primary</button>
+      <button kendoButton class="k-button k-primary-alt" (click)="onButtonClick()">Primary Alt</button>
+      <button kendoButton class="btn-white" (click)="onButtonClick()" >White</button>
+      <button kendoButton (click)="onButtonClick()" [disabled]="true">Disabled</button>
+    </div>
+    <div class="example-col">
+      <p>ButtonGroup</p>
+      <kendo-buttongroup>
+        <button kendoButton [togglable]="true">
+          Option A
+        </button>
+        <button kendoButton [togglable]="true">
+          Option B
+        </button>
+        <button kendoButton [togglable]="true">
+          Option C
+        </button>
+      </kendo-buttongroup>
+    </div>
+    <div class="example-col">
+      <p >DropDownButton</p>
+      <kendo-dropdownbutton
+        [data]="dropDownButtonItems"
+        [icon]="'cog'"
+        (itemClick)="onSplitButtonItemClick($event)">
+        User Settings
+      </kendo-dropdownbutton>
+    </div>
+    <div class="example-col">
+      <p >SplitButton</p>
+      <kendo-splitbutton
+        [data]="splitButtonItems"
+        [icon]="'paste'"
+        (itemClick)="onSplitButtonItemClick($event)"
+        (buttonClick)="onSplitButtonClick($event)">
+        Paste
+      </kendo-splitbutton>
+    </div>
+  </div>
+</div>
+<div id="DateInputs">
+  <h2>Date Inputs</h2>
+  <div class="row example-wrapper" style="min-height: 450px;">
+    <div class="col-xs-12 col-md-6 example-col">
+      <p >DateInput</p>
+      <kendo-dateinput class="k-date-input-custom" [value]="Date_Value"></kendo-dateinput>
+      <p >(use <code>?</code> and <code>?</code> to navigate, <code>?</code> and <code>?</code> to update)</p>
+
+      <p >DatePicker</p>
+      <kendo-datepicker [value]="Date_Value"></kendo-datepicker>
+      <p>(use <code>Alt</code>+<code>?</code> to open the Calendar)</p>
+
+      <p >TimePicker</p>
+      <kendo-timepicker
+        [value]="Date_Value"
+      ></kendo-timepicker>
+      <p>(use Alt+? to open the time list, Tab to move to the next time section in the popup, ? to increment and ? to decrement the value)</p>
+    </div>
+    <div class="col-xs-12 col-md-6 example-col">
+      <p>Calendar</p>
+      <kendo-calendar [value]="Date_Value"></kendo-calendar>
+    </div>
+  </div>
+</div>
+<div id="Dialogs">
+  <h2>Dialogs</h2>
+  <div class="example-wrapper">
+    <button kendoButton *ngIf="!dialogOpened && !windowOpened" (click)="open('dialog')">Open dialog</button>
+    <button kendoButton *ngIf="!dialogOpened && !windowOpened" (click)="open('window')">Open window</button>
+    <kendo-dialog title="Please confirm" *ngIf="dialogOpened" (close)="close('dialog')" [minWidth]="250" [width]="450">
+      <p style="margin: 30px; text-align: center;">Are you sure you want to continue?</p>
+      <kendo-dialog-actions>
+        <button kendoButton (click)="action('no')">No</button>
+        <button kendoButton (click)="action('yes')" primary="true">Yes</button>
+      </kendo-dialog-actions>
+    </kendo-dialog>
+
+    <kendo-window [minWidth]="200" [minHeight]="125" title="About" *ngIf="windowOpened" (close)="close('window')">
+      <p style="text-align: center;">Additional info</p>
+    </kendo-window>
+  </div>
+</div>
+<div id="Gauges">
+  <h2>Guagues</h2>
+  <div class="row">
+    <div class="col-sm-12 col-md-2">
+      <kendo-lineargauge #linear [pointer]="{ value: gauges_value }">
+      </kendo-lineargauge>
+    </div>
+    <div class="col-sm-12 col-md-5">
+
+      <kendo-radialgauge #radial [pointer]="{ value: gauges_value }">
+      </kendo-radialgauge>
+    </div>
+    <div class="col-sm-12 col-md-5">
+      <div class="card p-4">
+      <kendo-arcgauge #arc [value]="gauges_value">
+        <ng-template kendoArcGaugeCenterTemplate let-value="gauges_value">
+          {{ gauges_value }}
+        </ng-template>
+      </kendo-arcgauge>
+    </div></div>
+  </div>
+</div>
+  <div class="card d-inline-flex p-4">
+<div id="TreeView">
+  <h2>Tree Views</h2>
+  <kendo-treeview
+    [nodes]="treeViews_data"
+    textField="text"
+    kendoTreeViewExpandable
+    kendoTreeViewSelectable
+    kendoTreeViewHierarchyBinding
+    childrenField="items"
+  >
+  </kendo-treeview>
+</div></div>
+<div id="ScollViews">
+  <h2>Scoll Views</h2>
+  <kendo-scrollview
+    [data]="scollViews_items"
+    [width]="scollViews_width"
+    [height]="scollViews_height"
+    [arrows]="true"
+    [pageable]="true">
+    <ng-template let-item="item">
+      <h2 class="demo-title">{{item.title}}</h2>
+      <img src='{{item.url}}' alt='{{item.title}}' [ngStyle]="{minWidth: width}" draggable="false" />
+    </ng-template>
+  </kendo-scrollview>
+</div>
+<div id="Labels">
+  <h2>Labels</h2>
+  <div class="example-config">
+    Click on the label text to focus the associated input.
+  </div>
+  <div class="row example-wrapper" style="min-height: 450px;">
+    <div class="col-xs-12 col-md-6 example-col">
+      <label [for]="datepicker">DatePicker: </label>
+      <kendo-datepicker #datepicker></kendo-datepicker>
+    </div>
+
+    <div class="col-xs-12 col-md-6 example-col">
+      <label [for]="'input'">Input: </label>
+      <input id="input" />
+    </div>
+  </div>
+</div>
+<div id="Layouts">
+  <h2>Layouts</h2>
+  <div class="example-wrapper container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 example-col">
+        <p>Splitter</p>
+        <kendo-splitter orientation="horizontal" style="height: 360px;">
+          <kendo-splitter-pane size="50%" min="40%">
+            <p>PanelBar</p>
+            <kendo-panelbar>
+              <kendo-panelbar-item title="Invasion Games">
+                <kendo-panelbar-item title="Hockey"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Soccer"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Rugby"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Basketball"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Water polo"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Netball"></kendo-panelbar-item>
+              </kendo-panelbar-item>
+              <kendo-panelbar-item title="Striking & Fielding Games">
+                <kendo-panelbar-item title="Cricket"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Softball"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Baseball"></kendo-panelbar-item>
+              </kendo-panelbar-item>
+              <kendo-panelbar-item title="Net & Court Games" [expanded]="true">
+                <kendo-panelbar-item title="Badminton"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Squash"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Tennis" [selected]="true"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Table Tennis"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Volleyball"></kendo-panelbar-item>
+              </kendo-panelbar-item>
+              <kendo-panelbar-item title="Target Games">
+                <kendo-panelbar-item title="Golf"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Lawn bowls"></kendo-panelbar-item>
+                <kendo-panelbar-item title="Tenpin bowling"></kendo-panelbar-item>
+              </kendo-panelbar-item>
+            </kendo-panelbar>
+          </kendo-splitter-pane>
+
+          <kendo-splitter-pane min="40%">
+            <p>TabStrip</p>
+            <kendo-tabstrip>
+              <kendo-tabstrip-tab [title]="'Baseball'" [selected]="true">
+                <ng-template kendoTabContent>
+                  <p>
+                    Baseball is a bat-and-ball game played between two teams of nine players each, who take turns batting and fielding.
+                  </p>
+                  <p>
+                    The batting team attempts to score runs by hitting a ball that is thrown by the pitcher with a bat swung by the batter, then running counter-clockwise around a series of four bases: first, second, third, and home plate. A run is scored when a player advances around the bases and returns to home plate.
+                  </p>
+                </ng-template>
+              </kendo-tabstrip-tab>
+              <kendo-tabstrip-tab [title]="'Basketball'">
+                <ng-template kendoTabContent>
+                  <p>
+                    Basketball is a sport that is played by two teams of five players on a rectangular court. The objective is to shoot a ball through a hoop 18 inches (46 cm) in diameter and mounted at a height of 10 feet (3.048 m) to backboards at each end of the court. The game was invented in 1891 by Dr. James Naismith, who would be the first basketball coach of the Kansas Jayhawks, one of the most successful programs in the game's history.
+                  </p>
+                </ng-template>
+              </kendo-tabstrip-tab>
+              <kendo-tabstrip-tab [title]="'Football'">
+                <ng-template kendoTabContent>
+                  <p>
+                    Football is a family of team sports that involve, to varying degrees, kicking a ball with the foot to score a goal. Unqualified, the word football is understood to refer to whichever form of football is the most popular in the regional context in which the word appears.
+                  </p>
+                </ng-template>
+              </kendo-tabstrip-tab>
+            </kendo-tabstrip>
+          </kendo-splitter-pane>
+        </kendo-splitter>
+      </div>
+    </div>
+
+  </div>
+  <div class="panelbar-wrapper mt-3">
+    <kendo-panelbar>
+      <kendo-panelbar-item [title]="'My Teammates'" expanded="true">
+        <ng-template kendoPanelBarContent>
+          <div>
+            <div class="teamMate">
+              <img [src]="layoutImageUrl('andrew')" alt="Andrew Fuller">
+              <span class="mate-info">
+                              <h2>Andrew Fuller</h2>
+                              <p>Team Lead</p>
+                            </span>
+            </div>
+            <div class="teamMate">
+              <img [src]="layoutImageUrl('nancy')" alt="Nancy Leverling">
+              <span class="mate-info">
+                              <h2>Nancy Leverling</h2>
+                              <p>Sales Associate</p>
+                            </span>
+            </div>
+            <div class="teamMate">
+              <img [src]="layoutImageUrl('robert')" alt="Robert King">
+              <span class="mate-info">
+                              <h2>Robert King</h2>
+                              <p>Business System Analyst</p>
+                            </span>
+            </div>
+          </div>
+        </ng-template>
+      </kendo-panelbar-item>
+      <kendo-panelbar-item [title]="'Projects'">
+        <kendo-panelbar-item [title]="'New Business Plan'"></kendo-panelbar-item>
+        <kendo-panelbar-item [title]="'Sales Forecasts'" class="has-child">
+          <kendo-panelbar-item [title]="'Q1 Forecast'"></kendo-panelbar-item>
+          <kendo-panelbar-item [title]="'Q2 Forecast'"></kendo-panelbar-item>
+          <kendo-panelbar-item [title]="'Q3 Forecast'"></kendo-panelbar-item>
+          <kendo-panelbar-item [title]="'Q4 Forecast'"></kendo-panelbar-item>
+        </kendo-panelbar-item>
+        <kendo-panelbar-item [title]="'Sales Reports'"></kendo-panelbar-item>
+      </kendo-panelbar-item>
+      <kendo-panelbar-item [title]="'Programs'">
+        <kendo-panelbar-item [title]="'Monday'"></kendo-panelbar-item>
+        <kendo-panelbar-item [title]="'Tuesday'"></kendo-panelbar-item>
+        <kendo-panelbar-item [title]="'Wednesday'"></kendo-panelbar-item>
+        <kendo-panelbar-item [title]="'Thursday'"></kendo-panelbar-item>
+        <kendo-panelbar-item [title]="'Friday'"></kendo-panelbar-item>
+      </kendo-panelbar-item>
+      <kendo-panelbar-item [title]="'Communication'" [disabled]="true"></kendo-panelbar-item>
+    </kendo-panelbar>
+  </div>
+</div>
+<div id="Menus">
+  <h2>Menus</h2>
+  <kendo-menu [items]="menu_items">
+  </kendo-menu>
+</div>
+<div id="ToolTips">
+  <h2>Tooltips</h2>
+  <div kendoTooltip filter="span" id="agglomerations">
+    <span href="#" title="Canton - 26,300,000" id="canton"></span>
+    <span href="#" title="Jakarta - 25,800,000" id="jakarta"></span>
+    <span href="#" title="Mexico City - 23,500,000" id="mexico"></span>
+    <span href="#" title="Delhi - 23,500,000" id="delhi"></span>
+    <span href="#" title="Karachi - 22,100,000" id="karachi"></span>
+    <span href="#" title="New York - 21,500,000" id="newyork"></span>
+    <span href="#" title="Sao Paulo - 21,300,000" id="saopaolo"></span>
+    <span href="#" title="Mumbay/Bombay - 21,100,000" id="bombay"></span>
+    <span href="#" title="Los Angeles - 17,100,000" id="losangeles"></span>
+    <span href="#" title="Osaka - 16,800,000" id="osaka"></span>
+    <span href="#" title="Moscow - 16,200,000" id="moscow"></span>
+  </div>
+</div>
+<div id="ToolBars">
+  <h2>ToolBars</h2>
+  <kendo-toolbar>
+    <kendo-toolbar-button [text]="'Button'"></kendo-toolbar-button>
+    <kendo-toolbar-button [text]="'Toggle'" [togglable]="true"></kendo-toolbar-button>
+    <kendo-toolbar-splitbutton
+      [text]="'Split Button'"
+      [data]="splitButtonData">
+    </kendo-toolbar-splitbutton>
+    <kendo-toolbar-dropdownbutton
+      [text]="'DropDownButton'"
+      [data]="dropdownButtonData">
+    </kendo-toolbar-dropdownbutton>
+    <kendo-toolbar-buttongroup [selection]="'single'">
+      <kendo-toolbar-button [togglable]="true" [icon]="'align-left'"></kendo-toolbar-button>
+      <kendo-toolbar-button [togglable]="true" [icon]="'align-center'"></kendo-toolbar-button>
+      <kendo-toolbar-button [togglable]="true" [icon]="'align-right'"></kendo-toolbar-button>
+      <kendo-toolbar-button [togglable]="true" [icon]="'align-justify'"></kendo-toolbar-button>
+    </kendo-toolbar-buttongroup>
+  </kendo-toolbar>
+</div>
+<div id="popups">
+  <h2>Popup</h2>
+  <div class="example-config">
+    <button #anchor (click)="onToggle_popup()" class="k-button">{{popup_toggleText}} Popup</button>
+  </div>
+  <div class="example-wrapper">
+    <kendo-popup [popupClass]="'content popup'" [anchor]="anchor" (anchorViewportLeave)="popup_show = false" *ngIf="popup_show">
+      <!-- User-defined content -->
+      Popup content.
+    </kendo-popup>
+  </div>
+  <br/>
+  <br/>
+</div>
+<div id="ripples">
+  <h2>Ripples</h2>
+  <div class="example-wrapper">
+
+    <div kendoRippleContainer> <!-- You can apply this directive to any container element -->
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-4 example-col">
+          <p>Ripple on Buttons</p>
+          <button class="k-button">Default Button</button><br />
+          <button class="k-button k-primary">Primary Button</button><br />
+          <button class="k-button k-bare">Bare Button</button>
+        </div>
+        <div class="col-xs-12 col-sm-4 example-col">
+          <p>Ripple on Checkboxes</p>
+          <p style="line-height: 2.5em;">
+            <input type="checkbox" id="c1" class="k-checkbox" />
+            <label class="k-checkbox-label" for="c1">Checkbox</label><br/>
+            <input type="checkbox" id="c2" class="k-checkbox" checked />
+            <label class="k-checkbox-label" for="c2">Checkbox Active</label><br/>
+            <input type="checkbox" id="c3" class="k-checkbox" disabled />
+            <label class="k-checkbox-label" for="c3">Checkbox Disabled</label><br/>
+            <input type="checkbox" id="c4" class="k-checkbox" disabled checked />
+            <label class="k-checkbox-label" for="c4">Checkbox Checked & Disabled</label><br/>
+            <input type="checkbox" id="c5" class="k-checkbox " />
+            <label class="k-checkbox-label warning" for="c5">Checkbox Warning</label>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-4 example-col">
+          <p>Ripple on Radio Buttons</p>
+          <p style="line-height: 2.5em;">
+            <input type="radio" id="r1" name="rg" class="k-radio" />
+            <label class="k-radio-label" for="r1">Radio</label><br />
+
+            <input type="radio" id="r3" name="rg" class="k-radio" disabled />
+            <label class="k-radio-label" for="r3">Radio Disabled</label><br />
+            <input type="radio" id="r4" name="rg" class="k-radio" disabled checked />
+            <label class="k-radio-label" for="r4">Radio Checked & Disabled</label><br />
+            <input type="radio" id="r5" name="rg" class="k-radio" />
+            <label class="k-radio-label warning" for="r5">Radio Warning</label>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<div id="sortables">
+  <h2>Sortables</h2>
+  <h6>Items: {{sortable_items | json}}</h6>
+  <div class="container-fluid">
+    <kendo-sortable
+      [navigatable]="true"
+      [animation] = "true"
+      [data]="sortable_items"
+      class="row"
+      itemClass="sortableitem col-xs-6 col-sm-3"
+      activeItemClass="sortableitem col-xs-6 col-sm-3 active"
+    >
+    </kendo-sortable>
+  </div>
+</div>
+<div id="EmptySpace">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+</div>
+</div>

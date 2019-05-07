@@ -1,0 +1,121 @@
+<nav class="navbar navbar-expand-custom navbar-dark pt-0 pb-0 pr-0 ">
+  <a class="navbar-brand border-right border-dark mr-0" href="#">D</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse flex-row" id="navbarSupportedContent">
+    <ul class="navbar-nav nav-hover flex-grow-1">
+      <li class="pr-2 pl-2 nav-item border-right border-dark"><a class='nav-link'><span
+        class="oi oi-grid-three-up pr-2 text-primary "></span><span> Dhruv One UI</span><span
+        class="oi oi-chevron-bottom text-secondary pl-2"></span></a></li>
+      <li class="pr-2 pl-2 nav-item"><a class='nav-link' routerLink='demo/kendocomponents'>Kendo Components</a></li>
+      <li class="pr-2 pl-2 nav-item"><a class='nav-link' routerLink='demo/dashboard'>Dashboard</a></li>
+      <li class="pr-2 pl-2 nav-item active"><a class='nav-link' routerLink='demo/form'>Form</a></li>
+      <li class="pr-2 pl-2 nav-item"><a class='nav-link' routerLink="demo">{{"Core.Demo"|translate}}</a></li>
+      <li class="pr-2 pl-2 nav-item"><a class='nav-link' routerLink='demo/validationdemo'>{{"Core.ValidationDemo"|translate}}</a>
+      </li>
+      <!--<li class="nav-item"><a class='nav-link' routerLink='demo/listing1'>Listing 1</a></li>-->
+      <!--<li class="nav-item"><a class='nav-link' routerLink='demo/listing2'>Listing 2</a></li>-->
+      <!--<li class="nav-item"><a class='nav-link' routerLink='demo/listing3'>Listing 3</a></li>-->
+      <!--<li class="pl-2 pr-2 nav-item active"><a class='nav-link' routerLink='demo/wizard1'>Wizard 1</a></li>-->
+      <!--<li class="pl-2 pr-2 nav-item"><a class='nav-link' routerLink='demo/wizard2'>Wizard 2</a></li>-->
+      <!--<li class="pl-2 pr-2 nav-item"><a class='nav-link' routerLink='demo/uikit'>UI Kit</a></li>-->
+      <li class="pr-2 pl-2 nav-item"><a class='nav-link' routerLink="admin">{{"Core.Admin"|translate}}</a></li>
+      <li class="pr-2 pl-2 nav-item"><a class='nav-link' routerLink='register'>{{"Core.Register"|translate}}</a></li>
+      <li class="pr-2 pl-2 nav-item " *ngIf="!isLogin"><a class='nav-link' href='#' (click)="signin($event)">{{"Core.Login"|translate}}</a>
+      </li>
+      <li class="pr-2 pl-2 nav-item " *ngIf="isLogin"><a class='nav-link' href='#' (click)="signout($event)">{{"Core.Logout"|translate}}</a>
+      </li>
+      <li class="pr-2 pl-2 nav-item " *ngIf="isLogin"><a class='nav-link' href='account'>{{"Core.Welcome"|translate}}
+        {{userName}}</a></li>
+      <li
+        class="nav-item text-secondary flex-lg-fill border-right border-left border-dark align-items-centers right-bar">
+        <div class="d-flex">
+          <span class="oi text-secondary oi-magnifying-glass float-left p-sm-1 p-md-2  p-lg-3"></span>
+          <input type="search" class="search-bar float-left" placeholder="Search..."/></div>
+      </li>
+      <li
+        class="nav-item border-right border-dark position-relative flex-shrink-1 nav-dropdown text-secondary right-bar">
+        <div class="d-flex ">
+          <span class="oi oi-person float-left p-3"></span>
+          <a class="float-left mr-3 pt-3">John Doe <span class="oi oi-chevron-bottom pl-3 "></span> </a>
+
+          <ul class="dropdown">
+            <li><a href="# " class="pl-2 ">Menu Item One</a></li>
+            <li><a href="#" class="pl-2">Menu Item Two</a></li>
+            <li><a href="#" class="pl-2">Menu Item Three</a></li>
+
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item border-right border-dark d-flex position-relative flex-shrink-1 text-secondary right-bar">
+
+        <span class="oi oi-bell navbar-duo pt-3 pl-4 pr-4"></span><span class="rounded-circle notification-icon oi oi-star"></span>
+      </li>
+      <li class="nav-item d-flex flex-shrink-1 text-secondary right-bar">
+        <span class="oi oi-cog text-center navbar-duo pt-3 pl-4 pr-4"></span>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+<nav class="navbar bg-white d-flex flex-wrap nav-middle">
+  <ul class="navbar-nav d-flex flex-row flex-md-fill flex-wrap">
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">A</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">B</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">C</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">D</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">E</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">F</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">G</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+    <li class="nav-item p-3"><a class='nav-link d-flex flex-column text-center'>
+      <div class="rounded-circle d-inline-block m-auto letter-icon text-white">H</div>
+      <h6 class="pt-3 color-purple">Application Name</h6></a></li>
+  </ul>
+  <div class="border-fade d-flex flex-nowrap">
+    <a class="color-purple text-center pl-5 pt-3">View More
+      <span class="oi oi-arrow-right text-center d-block"></span>
+    </a>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-sub p-0">
+
+  <ul class="navbar-nav mr-auto flex-grow-1 dashboard">
+    <li class="nav-item position-relative dashboard-team show">
+      <a class='nav-link float-left drd-menu' href="#">Dashboard Team Overview<span
+        class="oi oi-chevron-bottom pl-3 "></span> </a>
+      <span class="oi oi-star color-gold float-left pt-3 pr-3"></span>
+
+      <ul>
+        <li><span class="oi oi-plus p-1 text-primary"></span><a href="# " class="pl-2">Create New Dashboard</a></li>
+        <li><span class="oi oi-home p-1 text-primary"></span><a href="#" class="pl-2">Browse All Dashboards</a></li>
+
+      </ul>
+
+    </li>
+    <li class="nav-item"><a class='nav-link'>Tab One</a></li>
+    <li class="nav-item"><a class='nav-link'>Tab Two</a></li>
+    <li class="nav-item"><a class='nav-link'>Tab Three</a></li>
+    <li class="nav-item"><a class='nav-link'>Tab Four</a></li>
+    <li class="nav-item"><a class='nav-link'>Tab Five</a></li>
+  </ul>
+  <div class="pl-3 pr-3"><span class="oi oi-grid-two-up text-primary"></span></div>
+</nav>
+
+

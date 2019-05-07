@@ -1,0 +1,46 @@
+<div class="d-flex flex-column pt-4"><div class="row widget-wrapper">
+        <div class="col-xs-12 col-sm-6 offset-sm-3 widget-col">
+             <div class="card">
+                 <div class="card-block">
+                         <form name="form" class="k-form" (ngSubmit)="f.form.valid && register()" #f="ngForm" novalidate>
+                             <fieldset>
+                                 <legend>{{"Core.Register"|translate}}</legend>
+                                 <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                                     <label>{{"Core.UserName"|translate}}</label> 
+                                     <input class="k-textbox" placeholder="User name" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+                                     <span *ngIf="f.submitted && !username.valid && username.errors.required" class="help-block validation">User name is required</span>
+                                     <span *ngIf="f.submitted && !username.valid && username.errors.message" class="help-block validation" [innerHTML]="username.errors.message"></span>
+                                 </div>
+                                 <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !firstname.valid }">
+                                        <label>{{"Core.FirstName"|translate}}</label> 
+                                        <input class="k-textbox" placeholder="First name" name="firstname" [(ngModel)]="model.firstname" #firstname="ngModel" required />
+                                         <span *ngIf="f.submitted && !firstname.valid && firstname.errors.required" class="help-block validation">First name is required</span>
+                                  </div>
+                                  <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !lastname.valid }">
+                                         <label>{{"Core.LastName"|translate}}</label> 
+                                         <input class="k-textbox" placeholder="Last name" name="lastname" [(ngModel)]="model.lastname" #lastname="ngModel" required />
+                                         <span *ngIf="f.submitted && !lastname.valid && lastname.errors.required" class="help-block validation">Last name is required</span>
+                                  </div>
+                                  <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                                        <label>{{"Core.Email"|translate}}</label>
+                                        <input class="k-textbox" placeholder="Email" name="email" [(ngModel)]="model.email" #email="ngModel" required  ngvemail/>
+                                        <span *ngIf="f.submitted && !email.valid && email.errors.required" class="help-block validation">Email is required</span>
+                                        <span *ngIf="f.submitted && !email.valid" class="help-block validation" [innerHTML]="email.errors.message"></span>
+                                        <span *ngIf="email.errors?.email" class="help-block validation">{{"Core.IncorrectEmailFormat"|translate}}</span>
+                                </div>                                            
+                                 <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                                     <label>{{"Core.Password"|translate}}</label>
+                                     <input class="k-textbox" placeholder="Password" type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                                     <span *ngIf="f.submitted && !password.valid && password.errors.required" class="help-block validation">Password is required</span>
+                                 </div>                                                                     
+                               </fieldset>
+                               <div class="text-right">
+                                     <button kendoButton  [disabled]="loading" [primary]='true'>{{"Core.Submit"|translate}}</button>
+                                     <button kendoButton [disabled]="loading" (click)='onCancelClick($event)'>{{"Core.Cancel"|translate}}</button>
+                               </div>                       
+                         </form>
+                 </div>
+             </div>
+        </div>
+</div>
+</div>

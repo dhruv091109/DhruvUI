@@ -1,0 +1,347 @@
+a {
+  text-decoration: none !important;
+}
+
+//Typography
+@font-face {
+  font-family: open-sans;
+  src: url("/assets/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+$font-family-sans-serif: 'open-sans';
+$icon-font-path: 'assets/open-iconic-master/font/fonts/';
+
+@import 'assets/open-iconic-master/font/css/open-iconic-bootstrap.scss';
+
+// Flags
+$enable-shadows: true;
+
+//Theme Color Classes
+
+.color-gold {
+  color: $gold;
+}
+a
+.color-blue {
+  color: $blue;
+}
+
+.color-purple {
+  color: $purple;
+}
+
+.color-pink {
+  color: $pink;
+}
+
+.color-green {
+
+  color: $green;
+
+}
+
+color-secondary {
+  color: $secondary;
+}
+
+.bg-gold {
+  background: $gold;
+}
+
+.bg-blue {
+  background: $blue;
+}
+
+.bg-purple {
+  background: $purple;
+}
+
+.bg-pink {
+  background: $pink;
+}
+
+.bg-green {
+  background: $green;
+}
+
+.border-gray {
+  border-color: $light-gray;
+}
+
+.border-dark {
+  border-color: $navy !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+//Border
+$table-border-color: rgba(108, 116, 153, 0.1);
+
+$box-shadow: 0 2px 10px 0 rgba(120, 120, 120, 0.35);
+$box-shadow-color: rgba(120, 120, 120, 0.35);
+
+.card, .k-pane {
+  background: $white;
+  box-shadow: $box-shadow;
+}
+
+.card-header {
+  padding: 1rem 1.5rem;
+  background: transparent;
+  border-color: $light-gray;
+  box-shadow: none;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-footer {
+  background: transparent;
+  border-color: $light-gray;
+}
+
+input[type=search]:focus {
+  outline: none;
+}
+
+::placeholder {
+  color: $secondary;
+  opacity: 1;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $navy;
+  font-weight: normal;
+  padding: 0.25rem 0rem;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+h4 {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+h6 {
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.box-shadow {
+  box-shadow: $box-shadow;
+}
+
+.app-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: $border-radius-lg;
+
+}
+
+.app-icon span {
+  font-size: 33px;
+  text-align: center;
+  line-height: 45px;
+
+  color: $white;
+  display: block;
+}
+
+.card-icon-list div.rounded-circle {
+  display: block;
+  width: 100%;
+  max-width: 42px;
+  height: 42px !important;
+}
+
+.card-icon-list div.rounded-circle .oi {
+  top: 0px;
+  font-size: 20px;
+}
+
+.user-initials {
+  width: 27px;
+  height: 27px;
+  text-align: center;
+}
+
+.badge-light {
+  color: $purple;
+  background: $light-gray;
+
+}
+
+.team {
+  min-width: 60px;
+}
+
+.team-member img {
+  max-width: 60px;
+}
+
+.visual-studio {
+  max-width: 45px;
+  height: 45px;
+  background: #68217a;
+
+}
+
+.visual-studio img {
+  margin: 9px -5px;
+
+}
+
+.oi.active {
+  color: $primary;
+
+}
+
+.calendar-icon, .view-icon {
+  width: 40px;
+  height: 40px;
+  background: $primary;
+  border-radius: $border-radius-lg;
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+
+}
+
+.calendar-icon span, .view-icon span {
+  font-size: 20px;
+  align-self: center;
+  color: $white;
+  display: block;
+  top: 0px;
+}
+
+.calendar-icon.active, .view-icon.active {
+  background: $white;
+  color: $primary;
+
+}
+
+.calendar-icon.active span, .view-icon.active span {
+  color: $primary;
+}
+
+.dashboard .card {
+  padding: 0;
+
+}
+
+//Snackbars
+.close {
+  font-size: 1.2rem;
+  color: $black;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.alert-danger {
+  color: $black;
+  background: $danger-snackbar !important;
+  border-color: $danger;
+  border-width: 2px;
+
+}
+
+.alert-danger .close {
+  color: $danger;
+}
+
+.alert-success {
+  color: $black;
+  background: $success-snackbar !important;
+  border-color: $green;
+  border-width: 2px;
+}
+
+.alert-success .close {
+  color: $green;
+}
+
+.alert-warning {
+  color: $black;
+  background: $warning-snackbar !important;
+  border-color: $orange;
+  border-width: 2px;
+}
+
+.alert-warning .close {
+  color: $orange;
+}
+
+.alert-primary {
+  color: $black;
+  background: $white;
+  border-color: $navy;
+  border-width: 2px;
+}
+
+.sidebar-shadow {
+  box-shadow: -2px 0px 12px -1px $box-shadow-color;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// Bootstrap 4 breakpoints & gutter
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$grid-gutter-width: 30px !default;
+
+// number of cards per line for each breakpoint
+$cards-per-line: (
+  xs: 1,
+  sm: 1,
+  md: 2,
+  lg: 3,
+  xl: 3
+);
+
+@each $name, $breakpoint in $grid-breakpoints {
+  @media (min-width: $breakpoint) {
+    .card-deck .card {
+      flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+    }
+  }
+}
+
+@media (min-width: 0) and (max-width: 575px) {
+  .card-deck .card {
+
+    flex: 0 0 auto;
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "Demo": {
+      "Title": "Démonstration de l'application Dhruv One UI",
+      "SetLanguage": "choisissez votre langue",
+      "English": "Anglais",
+      "French": "français",
+      "Chinese": "chinois",
+      "TestMessageBox": "Boîte de message de test",
+      "TestMessageBoxAfterRedirect": "Boîte de message de test après la modification de la page",
+      "TestLogout": "Test de déconnexion",
+      "TestErrorLog": "Tester le journal des erreurs",
+      "Message1": "Salut. Je montre un message dans la boîte de dialogue contextuelle.",
+      "VldRangeLength": "La longueur des caractères d'entrée doit être comprise entre 5 et 10"
+    }    
+}

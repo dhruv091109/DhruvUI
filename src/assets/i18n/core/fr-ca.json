@@ -1,0 +1,33 @@
+{
+    "Core": {
+      "SetLanguage": "choisissez votre langue",
+      "English": "Anglais",
+      "French": "français",
+      "Chinese": "chinois",
+      "Ok": "D'accord",
+      "Cancel": "Annuler",
+      "Close": "Fermer",
+      "Information": "Information",
+      "Warning":"Attention",
+      "Error": "Erreur",
+      "Success":"Succès",
+      "Demo": "Démo",
+      "ValidationDemo": "Validation de démonstration",
+      "Admin": "administrateur",
+      "Login": "s'identifier",
+      "Logout": "Déconnexion",
+      "Welcome": "Bienvenue",
+      "Register": "registre",
+      "Submit": "soumettre",
+      "UnAuthorized": "Accès refusé.",
+      "NetworkIssue": "Le serveur distant ne peut pas être connecté Il peut s'agir de problèmes de réseau. Veuillez contacter l'administrateur du système.",
+      "TimeZone": "fuseau horaire",
+      "SuccessLogin": "L'utilisateur se connecte avec succès au système.",
+      "UserName": "Nom d'utilisateur",
+      "FirstName": "Prénom",
+      "LastName": "nom de famille",
+      "Email": "email",
+      "Pasword": "Mot de passe",
+      "IncorrectEmailFormat": "Ce n'est pas un format d'email correct."           
+    }    
+}

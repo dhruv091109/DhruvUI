@@ -1,0 +1,33 @@
+<div class="container-fluid p-3"><h1>{{"Demo.Title"|translate}}</h1>
+<button kendoButton (click)='onTestMessageBoxClick()' [primary]='true'>{{"Demo.TestMessageBox"|translate}}</button>
+<button kendoButton (click)='onTestMessageBoxAfterRedirectClick()' [primary]='true'>{{"Demo.TestMessageBoxAfterRedirect"|translate}}</button>
+<button kendoButton (click)='onTestErrorLogClick()' [primary]='true'>{{"Demo.TestErrorLog"|translate}}</button>
+<button kendoButton (click)='onUserInfoClick()' [primary]='true'>Display Logon User Claims Info</button>
+<button kendoButton (click)='onCheckAdminRoleClick()' [primary]='true'>Admin Role Access</button>
+<button kendoButton (click)='onCheckCustomRoleClick()' [primary]='true'>Custom Role Access</button>
+<button kendoButton (click)='onCheckViewPermissionClick()' [primary]='true'>View Permission Access</button>
+<button kendoButton (click)='onCheckUpdatePermissionClick()' [primary]='true'>Update Permission Access</button>
+
+<div class="k-form-field">
+    <legend>{{"Demo.SetLanguage"|translate}}</legend>
+
+    <input type="radio" name="group" id="radio1" class="k-radio" [checked]='selectedLanguage=="en-ca"' (click)='setLanguage(languages.English_CA)' />
+    <label class="k-radio-label" for="radio1">{{"Demo.English"|translate}}</label>
+
+    <input type="radio" name="group" id="radio2" class="k-radio" [checked]='selectedLanguage=="fr-ca"' (click)='setLanguage(languages.French_CA)'/>
+    <label class="k-radio-label" for="radio2">{{"Demo.French"|translate}}</label>
+
+    <input type="radio" name="group" class="k-radio" id="radio3" [checked]='selectedLanguage=="zh-chs"' (click)='setLanguage(languages.Chinese_CHS)'/>
+    <label class="k-radio-label" for="radio3">{{"Demo.Chinese"|translate}}</label>
+ </div>
+ <legend>Login user Info:</legend>
+   <div *ngFor="let i of userInfo" class="row">
+      <div class="col-sm-12 col-md-2">{{i.type}}</div>
+        <div class="col-sm-12 col-md-4">{{i.value}}</div>            
+   </div>
+<legend>One UI Web API method call to test "OneUIAuthorize":</legend> 
+ <div class="row">
+    <h4>{{accessInfo}}</h4>
+</div>
+
+</div>

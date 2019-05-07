@@ -1,0 +1,33 @@
+{
+    "Core": {
+      "SetLanguage": "选择你的语言",
+      "English": "英文",
+      "French": "法文",
+      "Chinese": "中文",
+      "Ok": "可以",
+      "Cancel": "取消",
+      "Close": "关闭",
+      "Information": "信息",
+      "Warning":"提示",
+      "Error": "警告",
+      "Success":"成功",
+      "Demo": "演示",
+      "ValidationDemo": "显示输入数据检测",
+      "Admin": "管理员",
+      "Login": "登录",
+      "Logout": "注销",
+      "Welcome": "欢迎",
+      "Register": "新用户注册",   
+      "Submit": "提交",
+      "UnAuthorized": "拒绝非法访问",
+      "NetworkIssue": "系统网络故障，请联系网络管理员",
+      "TimeZone": "时区",
+      "SuccessLogin": "用户成功登录系统",
+      "UserName":"用户名",
+      "FirstName": "名称",
+      "LastName": "姓",
+      "Email": "邮箱",
+      "Password": "密码",
+      "IncorrectEmailFormat": "邮箱格式不正确"     
+    }    
+}

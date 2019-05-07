@@ -1,0 +1,35 @@
+
+//Colors
+
+$navy: #2c3944;
+$light-gray: #f2f4f9;
+$dark: #36495c;
+$danger:#df3126;
+$primary: #56a4ee;
+$secondary: #abb8c4;
+$gold: #e7a652;
+$orange:#f69125;
+$purple: #6c7499;
+$medium-gray:#abb8c4;
+$pink: #fc428d;
+$green: #5bb35f;
+$blue: #477fe3;
+$danger-snackbar:rgba(223,49,38, 0.10);
+$success-snackbar:rgba(91,179,95, 0.10);
+$warning-snackbar:rgba(246,145,37, 0.10);
+
+$body-bg: $light-gray;
+
+$theme-colors: (
+  "dark": $dark,
+  "primary": $primary,
+  "danger": $danger,
+  "secondary":$secondary,
+  "navy":$navy,
+  "gold":$gold,
+  "orange":$orange,
+  "purple":$purple,
+  "pink":$pink,
+  "green":$green,
+  "blue":$blue
+);

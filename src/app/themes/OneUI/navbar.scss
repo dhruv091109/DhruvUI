@@ -1,0 +1,311 @@
+
+
+// Navbar
+$navbar-brand-font-size: 33px;
+$navbar-dark-color: $light-gray;
+$navbar-dark-active-color: $light-gray !important;
+
+$navbar-padding-y: 0;
+$navbar-brand-font-size: 2.06rem;
+$navbar-dark-color: $light-gray;
+$navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) / 2 !default;
+$navbar-light-color: $purple;
+
+.navbar {
+  //overflow: hidden;
+}
+
+
+.navbar-nav .oi-chevron-bottom {
+  font-size: 10px;
+}
+
+//Navbar-dark
+.navbar-dark {
+  background: $dark;
+  max-height: 62px;
+}
+
+.navbar-dark .navbar-brand {
+  color: $primary;
+  padding: 0.5rem 1rem 0.5rem 0.25rem;
+  font-size: 2rem;
+}
+
+
+.navbar-dark .navbar-nav .nav-item .nav-link .navbar-sub .navbar-nav .nav-item .nav-link,.navbar-dark .navbar-nav .nav-link {
+
+  color: $light-gray;
+  white-space: nowrap;
+
+}
+.navbar-sub .navbar-nav .nav-item .nav-link {
+  padding-left:1rem;
+  padding-right: 1rem;
+}
+
+.navbar-dark .nav-hover {
+  white-space: nowrap;
+}
+
+.navbar-dark .nav-hover .nav-item {
+  text-align: center;
+}
+
+//Hover Effect
+.navbar-dark .nav-hover .nav-item:before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  background: $primary;
+  top: 0px;
+  transition: all 0.3s ease;
+}
+
+.navbar-dark .nav-hover .nav-item:not(.navbar-active,.active,.right-bar,:first-child):hover::before,
+.navbar-dark .nav-hover .nav-item:not(.navbar-active,.active,.right-bar,:first-child):focus::before {
+  width: 100%;
+}
+
+.navbar-dark .nav-hover .active.nav-item:before {
+  background: $white;
+  width: 100%;
+}
+.notification-icon
+{
+  width:12px;
+  height: 12px;
+  background: $danger;
+  color:$white;
+  font-size: 8px  ;
+  position: absolute;
+
+  top: 24%;
+  left: 47%;
+  text-align: center;
+}
+
+//Navbar-Sub
+
+.navbar-sub {
+  background-color: $navy;
+  color: $light-gray;
+}
+
+.navbar-sub a {
+  transition: all .25s ease;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link.drd-menu{
+  padding-left:1.25rem;
+  padding-right:1.25rem;
+  color:$light-gray;
+}
+
+.dashboard .dashboard-team{
+  border-right: 1px solid $dark;
+  display: none;
+}
+.dashboard .dashboard-team.show{
+  display: block;
+}
+
+.navbar-sub div span.oi {
+  font-size: 24px;
+}
+
+//Dropdowns
+
+.navbar-sub li ul, li.nav-dropdown ul {
+  float: left;
+  background: $navy;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  opacity: 0;
+  z-index: -1;
+  padding: 1rem 0rem;
+  position: absolute;
+  top: 35px;
+  visibility: hidden;
+  //  z-index: 1;
+  transition: all .15s ease;
+}
+
+li.nav-dropdown ul {
+  background: $dark;
+  padding: 0rem;
+  position: fixed;
+  left: initial;
+  width: initial;
+}
+
+.navbar-sub li:hover ul, li.nav-dropdown:hover ul {
+  opacity: 1;
+  z-index: 99;
+  top: 56px;
+  border-top: 1px solid $light-gray;
+  visibility: visible;
+}
+.navbar-sub li:hover ul {
+  top: 100%;
+}
+li.nav-dropdown:hover ul {
+  top: 61px;
+}
+
+.navbar-sub li ul li, li.nav-dropdown ul li {
+  float: none;
+  padding: 0.2rem 1.55rem 0.2rem 0.45rem;
+  width: 100%;
+
+}
+.navbar-sub li ul li {
+  width:100%;
+  overflow:hidden;
+  padding:0.2rem 1rem;
+}
+.navbar-sub li ul li * {
+  float:left;
+}
+.navbar-sub li ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+li.nav-dropdown ul li {
+  border-bottom: 1px solid $navy;
+  padding-bottom: 1.2rem;
+}
+
+li.nav-dropdown ul li:last-child {
+  border-bottom: none;
+}
+
+.navbar-sub li ul li a, li.nav-dropdown ul li a {
+  text-decoration: none;
+  color: $light-gray;
+  margin-top: 0.4rem;
+  display: block;
+  text-align: left;
+
+}
+
+.navbar-duo {
+  margin-top: 0.15rem;
+}
+
+.icon-large {
+  font-size: 24px;
+}
+
+.navbar-nav span.oi {
+  line-height: 1.5;
+}
+
+
+.search-bar {
+  display: flex;
+  border: none;
+  color: $secondary;
+  background: none;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.navbar-active {
+  background: $white;
+}
+
+.navbar-active .nav-link {
+  color: $dark !important;
+}
+.nav-middle
+{
+  display: none !important;
+}
+.nav-middle.show {
+  display: flex !important;
+}
+
+.nav-middle .letter-icon {
+  width: 57px;
+  height: 57px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 24px;
+  padding:18px 0px;
+  line-height: 0.9;
+  box-shadow: $box-shadow;
+}
+
+.nav-middle h6 {
+  display: table-caption;
+}
+
+.nav-middle .navbar-nav .nav-item:nth-child(4n+1) .nav-link .letter-icon {
+  background: $gold;
+}
+
+.nav-middle .navbar-nav .nav-item:nth-child(4n+2) .nav-link .letter-icon {
+  background: $pink;
+}
+
+.nav-middle .navbar-nav .nav-item:nth-child(4n+3) .nav-link .letter-icon {
+  background: $blue;
+}
+
+.nav-middle .navbar-nav .nav-item:nth-child(4n+4) .nav-link .letter-icon {
+  background: $green;
+}
+.nav-link{
+  padding:1rem;
+}
+.border-fade {
+  min-width: 10rem;
+}
+
+.border-fade:before {
+  content: '';
+  width: 1px;
+  float: left;
+  height: 100px;
+  background: linear-gradient($white 0%, $purple 50%, $white 100%);
+  display: block;
+}
+
+.border-fade span.oi {
+  font-size: 24px;
+  color: $secondary;
+}
+.dashboard .col-4
+{
+  max-width: 31%;
+}
+@media (min-width: 1570px){
+  .navbar-expand-custom {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-custom .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: flex !important;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+}
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus
+{
+  color:$light-gray;
+}

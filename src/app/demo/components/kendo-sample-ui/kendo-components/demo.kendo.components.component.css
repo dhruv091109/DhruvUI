@@ -1,0 +1,106 @@
+.example-wrapper,.example-col{ vertical-align: top; }
+
+.k-calendar { margin: 0 auto; }
+
+.k-gauge {
+    display: block;
+}
+.k-scrollview-wrap {
+    margin: 0 auto;
+  }
+  .demo-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 15px;
+    color: #fff;
+    background-color: rgba(0,0,0,.4);
+    text-align: center;
+    font-size: 24px;
+  }
+
+ kendo-tabstrip p {
+    margin: 0;
+    padding: 8px;
+}
+
+kendo-splitter-pane {
+    padding: 16px;
+}
+
+.teamMate:after {
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.teamMate h2 {
+  font-size: 1.3em;
+  font-weight: normal;
+  padding-top: 17px;
+  margin: 0;
+}
+.teamMate p {
+  margin: 0;
+  font-size: .8em;
+}
+.teamMate img {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.mate-info {
+  display: inline-block;
+  vertical-align: top;
+}
+.panelbar-wrapper {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+#agglomerations {
+  position: relative;
+  width: 692px;
+  height: 480px;
+  margin: 0 auto;
+  background: url('https://www.telerik.com/kendo-angular-ui-develop/components/tooltip/assets/world-map.jpg') no-repeat 0 0;
+}
+
+#agglomerations > span {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #fff600;
+  border-radius: 30px;
+  border: 0;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+  transition:  box-shadow .3s;
+  z-index: 10;
+}
+
+#agglomerations > span:hover {
+  box-shadow: 0 0 0 15px rgba(0,0,0,0.5);
+}
+
+#canton { top: 226px; left: 501px; }
+#jakarta { top: 266px; left: 494px; }
+#mexico { top: 227px; left: 182px; }
+#delhi { top: 214px; left: 448px; }
+#karachi { top: 222px; left: 431px; }
+#newyork { top: 188px; left: 214px; }
+#saopaolo { top: 304px; left: 248px; }
+#bombay { top: 233px; left: 438px; }
+#losangeles { top: 202px; left: 148px; }
+#osaka { top: 201px; left: 535px; }
+#moscow { top: 153px; left: 402px; }
+

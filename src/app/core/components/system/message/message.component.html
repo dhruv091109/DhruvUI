@@ -1,0 +1,10 @@
+<div id='messageContainer' *ngIf='!messageClosed'>
+   <div role="alert" *ngFor="let message of messages" class="alert" [ngClass]="{'alert':message, 'alert-dismissible':message, 'alert-primary':message.type==messageTypes.Info, 'alert-success':message.type==messageTypes.Success,'alert-danger':message.type==messageTypes.Error,'alert-warning':message.type==messageTypes.Warning}">
+
+     <div class="msg">{{ message.message }}</div>
+
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+       <span class="oi oi-circle-x"></span>
+     </button>
+   </div>
+</div>

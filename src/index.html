@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Added Content Security Policy Headers-->
+  <!--
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none';script-src 'self';style-src 'self';font-src 'self';img-src 'self' data:;connect-src 'self'">
+  -->
+  <!-- Note: For Kendo UI Angular, style-src 'self', img-src 'self' should not be blocked in CSP settings.
+       unsafe-inline is still required for styles.
+       If that's not acceptable for the project's requirements,
+       the other option is to only use global styles in the application
+       and to not use any Angular libraries which contain component styles.
+       Note that the project will lose full benefits of the component-based architecture under this scenario.
+  -->
+
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval';">
+  <!-- Based on following reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options, following settings should be set in host server, not here.
+  <meta name="X-Frame-Options" content="SAMEORIGIN">
+  <meta name="X-XSS-Protection" content="1; mode=block">
+  <meta name="X-Content-Type-Options" content="nosniff">
+  <meta name="Referrer-Policy" content="origin">
+  <meta name="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+  -->
+
+  <meta charset="utf-8">
+  <title>OneUIKendo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+   <app-root>
+      <span class="k-icon k-i-loading" style="color: #ff6358"></span>
+   </app-root>
+</body>
+</html>

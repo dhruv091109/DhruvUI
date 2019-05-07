@@ -1,0 +1,15 @@
+{
+    "Demo": {
+      "Title": "Dhruv 公司模板",
+      "SetLanguage": "选择你的语言",
+      "English": "英文",
+      "French": "法文",
+      "Chinese": "中文",
+      "TestMessageBox": "测试信息窗口",
+      "TestMessageBoxAfterRedirect": "页面跳转后测试信息窗口",
+      "TestLogout": "测试账户登出",
+      "TestErrorLog": "测试错误日志",
+      "Message1": "你好，提示信息正在对话窗显示",
+      "VldRangeLength": "输入字符必须在5到10个字符之间"
+    }    
+}

@@ -1,0 +1,33 @@
+{
+    "Core": {
+      "SetLanguage": "Select your language",
+      "English": "English",
+      "French": "French",
+      "Chinese": "Chinese",
+      "Ok": "Ok",
+      "Cancel": "Cancel",
+      "Close": "Close",
+      "Information": "Information",
+      "Warning":"Warning",
+      "Error": "Error",
+      "Success":"Success",
+      "Demo": "Demo",
+      "ValidationDemo": "Demo Validation",
+      "Admin": "Admin",
+      "Login": "Login",
+      "Logout": "Logout",
+      "Welcome": "Welcome",
+      "Register": "Register",
+      "Submit": "Submit",
+      "UnAuthorized": "Access declined.",
+      "NetworkIssue": "Remote server cannot be connected. It could be network issues. Please contact system administrator.",
+      "TimeZone": "Time Zone",
+      "SuccessLogin": "User successfully login the system.",     
+      "UserName":"User Name",
+      "FirstName": "First Name",
+      "LastName": "Last Name",
+      "Email": "Email",
+      "Password": "Password",
+      "IncorrectEmailFormat": "It is not a correct email format." 
+    }
+  }

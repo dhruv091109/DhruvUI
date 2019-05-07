@@ -1,0 +1,64 @@
+<div class="d-flex flex-column">
+
+
+<div class="row widget-wrapper">
+  <div class="col-xs-12 col-sm-6 offset-sm-3 widget-col">
+  <div class="pt-4 mx-auto">
+    <h1 class="color-purple">{{title}}</h1>
+    <span>
+Reference: <a href="https://github.com/rsaenen/ng4-validators" target="_blank">https://github.com/rsaenen/ng4-validators</a></span>
+  </div></div>
+        <div class="col-xs-12 col-sm-6 offset-sm-3 widget-col">
+
+             <div class="card">
+                 <div class="card-block">
+                         <form name="form" class="k-form" (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
+                             <fieldset>
+                                 <legend>{{"Core.ValidationDemo"|translate}}</legend>
+                                 <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !field1.valid }">
+                                     <label>Range length validation</label> 
+                                     <input class="k-textbox" placeholder="Range length valdiation" name="field1" [(ngModel)]="model.field1" #field1="ngModel" [rangeLength]="[5, 10]"/>
+                                     <span *ngIf="field1.errors?.rangeLength" class="help-block validation" >{{"Demo.VldRangeLength"|translate}}</span>
+                                     <span *ngIf="f.submitted && !field1.valid" class="help-block validation" [innerHTML]="field1.errors.message"></span>
+                                 </div>
+                                 <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !field2.valid }">
+                                        <label>Date format validation</label> 
+                                        <input class="k-textbox" placeholder="Date format validation" name="field2" [(ngModel)]="model.field2" #field2="ngModel" date />
+                                         <span *ngIf="field2.errors?.date" class="help-block validation">It is not a correct date format.</span>
+                                  </div>
+                                  <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !field3.valid }">
+                                         <label>Number validation</label> 
+                                         <input class="k-textbox" placeholder="Number validation" name="field3" [(ngModel)]="model.field3" #field3="ngModel" number />
+                                         <span *ngIf="field3.errors?.number" class="help-block validation">It is not a correct number.</span>
+                                  </div>
+                                  <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                                        <label>Email Validation</label>
+                                        <input class="k-textbox" placeholder="Email" name="email" [(ngModel)]="model.email" #email="ngModel" ngvemail/>
+                                        <span *ngIf="email.errors?.email" class="help-block validation">It is not a correct email format</span>
+                                        <span *ngIf="f.submitted && !email.valid" class="help-block validation" [innerHTML]="email.errors.message"></span>
+                                    </div>                                            
+                                 <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                                     <label>Password min length validation</label>
+                                     <input class="k-textbox" placeholder="Password" type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required [rangeLength]="[6, 100]" />
+                                     <span *ngIf="!password.valid && password.errors.required" class="help-block validation">Password is required</span>
+                                     <span *ngIf="!password.valid && password.errors.rangeLength" class="help-block validation">Password must be more than 6 characters</span>
+                                     
+                                 </div>                          
+                                 <div class="k-form-field" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                                        <label>Certain Password Validation</label>
+                                        <input class="k-textbox" placeholder="Certain Password" type="password" name="certainPassword" [(ngModel)]="model.certainPassword" #certainPassword="ngModel" required [equalTo]="password"/>
+                                        <span *ngIf="!certainPassword.valid && certainPassword.errors.required" class="help-block validation">Certain Password is required</span>
+                                        <span *ngIf="password.valid && certainPassword.errors?.equalTo" class="help-block validation">Input certain password must be the same as the input password.</span>
+                                 </div>                                       
+                               </fieldset>
+                               <div class="text-right">
+                                     <button kendoButton  [primary]='true'>{{"Core.Submit"|translate}}</button>
+                                     <button kendoButton  (click)='onCancelClick($event)'>{{"Core.Cancel"|translate}}</button>
+                               </div>                       
+                         </form>
+                 </div>
+             </div>
+        </div>
+</div>
+
+</div>
